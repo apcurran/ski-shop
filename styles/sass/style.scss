@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-children-margin: 1.5rem 2.5rem;
+    --main-bg: #999;
+    --buy-btn-clr: #0079b1;
+    --main-letter-spacing: .9px;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+    letter-spacing: var(--main-letter-spacing);
+}
+
+@import "_header";
+@import "_home";
+@import "_mens";
+@import "_footer";
