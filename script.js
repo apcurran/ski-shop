@@ -1,42 +1,71 @@
 const clothingFilter = (() => {
     // Cache DOM
     const ul = document.querySelector(".clothing-list");
-    const sectionHeaders = document.querySelectorAll(".section-header");
-    const sections = document.querySelectorAll(".section-clothing");
+    const mainContainer = document.querySelector(".clothing-container");
+    const sectionHeaders = mainContainer.querySelectorAll(".section-header");
+    const sections = mainContainer.querySelectorAll(".section-clothing");
 
     // Module Functions
+    function addMainContainerMargin() {
+        mainContainer.style.marginTop = "8rem";
+        mainContainer.style.marginBottom = "8rem";
+    }
+
     function getId(event) {
         const myId = event.target.id;
         return myId;
     }
 
-    function loopAndHide(clothingName) {
+    function loopAndHideSections(clothingName) {
         sections.forEach((section) => {
             if (section.dataset.clothing !== clothingName) {
                 section.style.display = "none";
             } else {
-                section.style.display = "initial";
+                section.style.display = "grid";
             }
         });
+    }
+
+    function loopAndHideHeaders(clothingName) {
+        sectionHeaders.forEach((sectionHeader) => {
+            if (sectionHeader.dataset.clothing !== clothingName) {
+                sectionHeader.style.display = "none";
+            } else {
+                sectionHeader.style.display = "initial";
+            }
+        });
+    }
+
+    function showAllItems() {
+        sectionHeaders.forEach(sectionHeader => sectionHeader.style.display = "initial");
+        sections.forEach(section => section.style.display = "grid");
     }
 
     function hideOthers(event) {
         const listItemId = getId(event);
         switch (listItemId) {
             case "jackets":
-                loopAndHide(listItemId);
+                loopAndHideHeaders(listItemId);
+                loopAndHideSections(listItemId);
+                addMainContainerMargin();
                 break;
             case "shirts":
-                loopAndHide(listItemId);
+                loopAndHideHeaders(listItemId);
+                loopAndHideSections(listItemId);
+                addMainContainerMargin();
                 break;
             case "socks":
-                loopAndHide(listItemId);
+                loopAndHideHeaders(listItemId);
+                loopAndHideSections(listItemId);
+                addMainContainerMargin();
                 break;
             case "boots":
-                loopAndHide(listItemId);
+                loopAndHideHeaders(listItemId);
+                loopAndHideSections(listItemId);
+                addMainContainerMargin();
                 break;
-            default:
-                alert("Something went wrong...");
+            case "all-items":
+                showAllItems();
         }
     }
 

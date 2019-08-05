@@ -165,8 +165,14 @@ button {
   letter-spacing: var(--main-letter-spacing);
 }
 
+.clothing-container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .clothing-list {
-  top: -2rem;
+  margin-top: 7.25rem;
+  top: 2rem;
   position: sticky;
   list-style: none;
   height: 50vh;
@@ -183,7 +189,6 @@ button {
   cursor: pointer;
 }
 .clothing-list-item:first-child {
-  margin-top: 4rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
@@ -232,10 +237,6 @@ button {
 
 .section-jackets-header {
   margin-top: 4rem;
-}
-
-.section-boots {
-  margin-bottom: 4rem;
 }
 
 .footer {
