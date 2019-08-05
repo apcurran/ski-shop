@@ -7,8 +7,8 @@ const clothingFilter = (() => {
 
     // Module Functions
     function addMainContainerMargin() {
-        mainContainer.style.marginTop = "8rem";
-        mainContainer.style.marginBottom = "8rem";
+        mainContainer.style.marginTop = "12rem";
+        mainContainer.style.marginBottom = "12rem";
     }
 
     function getId(event) {

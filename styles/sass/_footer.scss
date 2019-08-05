@@ -33,14 +33,13 @@
 
     &-left {
         margin: 0 6vw;
-        grid-column: 1 / 2;
         display: flex;
         flex-direction: column;
     }
 
     &-right {
         margin: 0 6vw;
-        grid-column: 2 / 3;
+        align-self: flex-start;
         display: flex;
         flex-direction: column;
     }

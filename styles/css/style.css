@@ -95,7 +95,7 @@ html {
 }
 
 .main {
-  margin: 1em auto;
+  margin: 8rem auto;
   width: 1350px;
   max-width: 90%;
   display: grid;
@@ -166,12 +166,12 @@ button {
 }
 
 .clothing-container {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 .clothing-list {
-  margin-top: 7.25rem;
+  margin-top: 11.25rem;
   top: 2rem;
   position: sticky;
   list-style: none;
@@ -187,6 +187,7 @@ button {
 .clothing-list-item:hover {
   opacity: 1;
   cursor: pointer;
+  text-decoration: underline;
 }
 .clothing-list-item:first-child {
   padding-bottom: 1rem;
@@ -239,6 +240,65 @@ button {
   margin-top: 4rem;
 }
 
+.header-subtitle-womens {
+  position: absolute;
+  top: 62%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: #fff;
+}
+
+.header-subtitle-contact {
+  position: absolute;
+  top: 62%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: #fff;
+}
+
+.contact-container {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-section {
+  width: 80%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.form-field .contact-input {
+  padding: 0.5em;
+  font-size: 1rem;
+}
+
+.form-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.form-add-btn {
+  padding: 1em 3em;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--buy-btn-clr);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -269,13 +329,12 @@ button {
 }
 .footer-left {
   margin: 0 6vw;
-  grid-column: 1/2;
   display: flex;
   flex-direction: column;
 }
 .footer-right {
   margin: 0 6vw;
-  grid-column: 2/3;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
 }
