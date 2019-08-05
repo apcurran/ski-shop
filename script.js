@@ -10,25 +10,30 @@ const clothingFilter = (() => {
         return myId;
     }
 
-    function loopAndHide() {
-        sections.forEach((section) => section.style.display = "none");
+    function loopAndHide(clothingName) {
+        sections.forEach((section) => {
+            if (section.dataset.clothing !== clothingName) {
+                section.style.display = "none";
+            } else {
+                section.style.display = "initial";
+            }
+        });
     }
 
     function hideOthers(event) {
         const listItemId = getId(event);
         switch (listItemId) {
             case "jackets":
-                alert("Hide sections other than jackets!");
-                loopAndHide();
+                loopAndHide(listItemId);
                 break;
             case "shirts":
-                alert("Hide sections other than shirts!");
+                loopAndHide(listItemId);
                 break;
             case "socks":
-                alert("Hide sections other than socks!");
+                loopAndHide(listItemId);
                 break;
             case "boots":
-                alert("Hide sections other than boots!");
+                loopAndHide(listItemId);
                 break;
             default:
                 alert("Something went wrong...");
