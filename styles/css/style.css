@@ -126,6 +126,19 @@ body {
 .nav-list-link:hover {
   opacity: 0.8;
 }
+.nav-list .bag-link-icon-container {
+  display: flex;
+  justify-content: center;
+  opacity: 0.75;
+  transition: opacity 210ms ease;
+}
+.nav-list .bag-link-icon-container:hover {
+  opacity: 1;
+}
+.nav-list .bag-link-icon {
+  width: 25px;
+  margin-right: 1em;
+}
 
 .main {
   margin: 8rem auto;

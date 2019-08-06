@@ -110,5 +110,21 @@
                 opacity: .8;
             }
         }
+
+        .bag-link-icon-container {
+            display: flex;
+            justify-content: center;
+            opacity: .75;
+            transition: opacity 210ms ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .bag-link-icon {
+            width: 25px;
+            margin-right: 1em;
+        }
     }
 }
