@@ -285,14 +285,13 @@ button {
   width: 100%;
 }
 .section-clothing-title {
+  display: flex;
+  justify-content: space-between;
   font-size: 0.95rem;
   font-weight: 400;
   text-align: left;
   padding-top: 1em;
   padding-bottom: 1em;
-}
-.section-clothing-title span {
-  float: right;
 }
 
 .section-jackets-header {
