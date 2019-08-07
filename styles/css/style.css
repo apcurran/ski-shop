@@ -333,7 +333,8 @@ button {
 }
 
 .contact-form-section {
-  width: 65%;
+  width: 720px;
+  max-width: 100%;
 }
 
 .form-field {
@@ -366,6 +367,48 @@ button {
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
+}
+
+.header-subtitle-checkout {
+  position: absolute;
+  top: 62%;
+  right: 0;
+  font-size: 5rem;
+  color: #fff;
+  opacity: 0;
+  transform: translate3d(-50%, 20%, 0);
+  animation: subtitleSlide 1100ms ease forwards;
+  animation-delay: 210ms;
+}
+
+.checkout-container {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-form-section {
+  width: 720px;
+  max-width: 100%;
+}
+
+.duel-field {
+  flex-direction: row;
+}
+.duel-field-section {
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+.duel-field-section:first-child {
+  margin-right: 1em;
+}
+
+.credit-card-title {
+  font-size: 1rem;
 }
 
 .footer {

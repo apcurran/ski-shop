@@ -1,9 +1,14 @@
 const shoppingCart = (() => {
     // Code that runs across all pages.
     let cartArr = JSON.parse(localStorage.getItem("myShoppingCartItems")) || [];
-    console.log(cartArr);
+    const cartIcon = document.querySelector(".bag-link-quantity");
 
-    
+    function updateCartIconTotal() {
+        const totalItems = cartArr.length;
+        cartIcon.textContent = totalItems;
+    }
+
+    updateCartIconTotal();
 
     // Code that only runs on clothing pages.
     if (document.querySelector("body").dataset.clothing) {
@@ -18,8 +23,9 @@ const shoppingCart = (() => {
         }
 
         function getItemPrice(itemHeader) {
-            const price = itemHeader.children[1].textContent;
-            return price;
+            const priceStr = itemHeader.children[1].textContent;
+            const priceNum = parseFloat(priceStr.slice(1));
+            return priceNum;
         }
 
         function createItemObj(itemName, itemPrice) {
@@ -36,7 +42,6 @@ const shoppingCart = (() => {
         }
 
         function saveCartItem() {
-            // Save to Local Storage
             localStorage.setItem("myShoppingCartItems", JSON.stringify(cartArr));
         }
 
@@ -52,10 +57,49 @@ const shoppingCart = (() => {
                 const newItemObj = createItemObj(name, price);
                 pushItemObj(newItemObj);
                 saveCartItem();
+                updateCartIconTotal();
+            } else {
+                return;
             }
         }
 
         mainClothingContainer.addEventListener("click", addToCart);
+    }
+
+
+    // Code that only runs on the checkout page.
+    if (document.querySelector("body").dataset.checkout) {
+        console.log("Hi checkout page!");
+
+        const mainCheckoutContainer = document.querySelector(".main-checkout-container");
+        
+        function renderCartItems() {
+            const section = document.createElement("section");
+
+            for (const obj of cartArr) {
+                const itemName = obj.name;
+                const itemPrice = obj.price;
+
+                // Parent el for name and price.
+                const article = document.createElement("article");
+                const nameHeader = document.createElement("h3");
+                const priceHeader = document.createElement("h3");
+
+                nameHeader.textContent = itemName;
+                priceHeader.textContent = `$${itemPrice}`; // Add in the dollar sign for price.
+
+                article.classList.add("cart-item-checkout-article");
+                article.appendChild(nameHeader);
+                article.appendChild(priceHeader);
+
+                section.appendChild(article);
+            }
+
+            mainCheckoutContainer.prepend(section);
+
+        }
+
+        renderCartItems();
 
     }
     
