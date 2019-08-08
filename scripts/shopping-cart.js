@@ -72,6 +72,7 @@ const shoppingCart = (() => {
         console.log("Hi checkout page!");
 
         const mainCheckoutContainer = document.querySelector(".main-checkout-container");
+        const itemSubtotalSpan = document.querySelector(".items-subtotal");
         
         function renderCartItems() {
             const section = document.createElement("section");
@@ -82,6 +83,7 @@ const shoppingCart = (() => {
 
                 // Parent el for name and price.
                 const article = document.createElement("article");
+                const image = document.createElement("img");
                 const nameHeader = document.createElement("h3");
                 const priceHeader = document.createElement("h3");
 
@@ -99,8 +101,18 @@ const shoppingCart = (() => {
 
         }
 
-        renderCartItems();
+        function updateCheckoutSubtotal() {
+            let subtotal = 0;
+            for (const obj of cartArr) {
+                const itemCost = obj.price;
+                subtotal += itemCost;
+            }
 
+            itemSubtotalSpan.textContent = subtotal;
+        }
+
+        renderCartItems();
+        updateCheckoutSubtotal();
     }
     
 })();
