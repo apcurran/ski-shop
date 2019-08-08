@@ -2,6 +2,12 @@ const shoppingCart = (() => {
     // Code that runs across all pages.
     let cartArr = JSON.parse(localStorage.getItem("myShoppingCartItems")) || [];
     const cartIcon = document.querySelector(".bag-link-quantity");
+    const burgerNav = document.querySelector(".nav-burger-list-container");
+    const navUl = document.querySelector(".nav-list");
+
+    function toggleNav() {
+        navUl.classList.toggle("open-active");
+    }
 
     function updateCartIconTotal() {
         const totalItems = cartArr.length;
@@ -9,6 +15,7 @@ const shoppingCart = (() => {
     }
 
     updateCartIconTotal();
+    burgerNav.addEventListener("click", toggleNav);
 
     // Code that only runs on clothing pages.
     if (document.querySelector("body").dataset.clothing) {
@@ -114,8 +121,23 @@ const shoppingCart = (() => {
             itemSubtotalSpan.textContent = subtotal;
         }
 
+        function deleteItem(event) {
+            if (event.target.className === "delete-btn") {
+                const selectedItem = event.target.parentElement;
+                const parentSection = selectedItem.parentElement;
+                parentSection.removeChild(selectedItem); // Delete from DOM
+
+                // Delete from cartArr in local storage
+                cartArr.splice(selectedItem, 1);
+                localStorage.setItem("myShoppingCartItems", JSON.stringify(cartArr));
+                cartArr = JSON.parse(localStorage.getItem("myShoppingCartItems"));
+            }
+        }
+
         renderCartItems();
         updateCheckoutSubtotal();
+
+        mainCheckoutContainer.addEventListener("click", deleteItem);
     }
     
 })();
