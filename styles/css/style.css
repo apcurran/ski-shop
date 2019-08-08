@@ -227,6 +227,7 @@ button {
 .clothing-container {
   margin-top: 8rem;
   margin-bottom: 8rem;
+  width: 100%;
 }
 
 .clothing-list {
@@ -275,6 +276,7 @@ button {
 .section-clothing {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   grid-gap: 1.5rem;
 }
 .section-clothing-card {

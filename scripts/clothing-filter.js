@@ -7,8 +7,8 @@ const clothingFilter = (() => {
 
     // Module Functions
     function addMainContainerMargin() {
-        mainContainer.style.marginTop = "12rem";
-        mainContainer.style.marginBottom = "12rem";
+        mainContainer.style.marginTop = "8rem";
+        mainContainer.style.marginBottom = "8rem";
     }
 
     function getId(event) {
@@ -31,13 +31,13 @@ const clothingFilter = (() => {
             if (sectionHeader.dataset.clothing !== clothingName) {
                 sectionHeader.style.display = "none";
             } else {
-                sectionHeader.style.display = "initial";
+                sectionHeader.style.display = "block";
             }
         });
     }
 
     function showAllItems() {
-        sectionHeaders.forEach(sectionHeader => sectionHeader.style.display = "initial");
+        sectionHeaders.forEach(sectionHeader => sectionHeader.style.display = "block");
         sections.forEach(section => section.style.display = "grid");
     }
 
