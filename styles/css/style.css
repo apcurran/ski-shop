@@ -397,7 +397,7 @@ button {
   align-items: center;
 }
 .main-checkout-container section:first-child {
-  width: 600px;
+  width: 720px;
   max-width: 90%;
   display: flex;
   flex-direction: column;
@@ -407,8 +407,9 @@ button {
 }
 
 .cart-item-checkout-article {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 4fr 1fr 0.5fr;
+  align-items: center;
   margin-top: 2rem;
 }
 
@@ -417,6 +418,12 @@ button {
 }
 .checkout-items-total h2 {
   font-weight: 400;
+}
+
+.delete-btn {
+  content: url(../../images/x-thin-optimized.svg);
+  width: 20px;
+  cursor: pointer;
 }
 
 .checkout-form-section {

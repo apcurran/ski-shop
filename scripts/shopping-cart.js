@@ -83,16 +83,19 @@ const shoppingCart = (() => {
 
                 // Parent el for name and price.
                 const article = document.createElement("article");
-                const image = document.createElement("img");
                 const nameHeader = document.createElement("h3");
                 const priceHeader = document.createElement("h3");
+                const div = document.createElement("div");
 
                 nameHeader.textContent = itemName;
                 priceHeader.textContent = `$${itemPrice}`; // Add in the dollar sign for price.
 
                 article.classList.add("cart-item-checkout-article");
+                div.classList.add("delete-btn");
+
                 article.appendChild(nameHeader);
                 article.appendChild(priceHeader);
+                article.appendChild(div);
 
                 section.appendChild(article);
             }
