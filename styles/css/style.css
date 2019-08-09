@@ -404,6 +404,28 @@ button {
   margin-top: 4rem;
 }
 
+@media screen and (max-width: 94em) {
+  .header-subtitle {
+    font-size: 4rem;
+  }
+
+  .section-clothing {
+    grid-template-columns: repeat(2, 0.5fr);
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .header-subtitle {
+    font-size: 2.25rem;
+  }
+
+  .section-clothing {
+    grid-template-columns: 1fr;
+  }
+
+  .clothing-list {
+    padding-right: 3rem;
+  }
+}
 .header-subtitle-womens {
   position: absolute;
   top: 62%;
@@ -416,6 +438,16 @@ button {
   animation-delay: 210ms;
 }
 
+@media screen and (max-width: 94em) {
+  .header-subtitle-womens {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .header-subtitle-womens {
+    font-size: 2.25rem;
+  }
+}
 .header-subtitle-contact {
   position: absolute;
   top: 62%;
@@ -538,6 +570,11 @@ button {
   max-width: 100%;
 }
 
+.checkout-container {
+  width: 720px;
+  max-width: 90%;
+}
+
 .checkout-form-header {
   color: var(--buy-btn-clr);
 }
@@ -546,8 +583,7 @@ button {
   flex-direction: row;
 }
 .duel-field-section {
-  flex-grow: 1;
-  flex-basis: 50%;
+  flex: 1 1 20%;
 }
 .duel-field-section:first-child {
   margin-right: 1em;
@@ -558,8 +594,18 @@ button {
 }
 
 @media screen and (max-width: 44em) {
-  .header-subtitle-contact {
-    font-size: 2.5rem;
+  .header-subtitle-checkout {
+    font-size: 2.25rem;
+  }
+
+  .duel-field {
+    flex-direction: column;
+  }
+  .duel-field-section {
+    flex: 1 1 20%;
+  }
+  .duel-field-section:first-child {
+    margin-right: 0;
   }
 }
 .footer {

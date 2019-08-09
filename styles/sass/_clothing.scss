@@ -95,3 +95,29 @@ button {
 .section-jackets-header {
     margin-top: 4rem; // Add some vertical spacing to match the ul on the left.
 }
+
+@media screen and (max-width: 94em) {
+    .header-subtitle {
+        font-size: 4rem;
+    }
+
+    .section-clothing {
+        grid-template-columns: repeat(2, .5fr);
+    }
+
+}
+
+@media screen and (max-width: 56.25em) {
+    .header-subtitle {
+        font-size: 2.25rem;
+    }
+    
+    .section-clothing {
+        grid-template-columns: 1fr;
+    }
+
+    .clothing-list {
+        padding-right: 3rem;
+    }
+
+}

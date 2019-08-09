@@ -63,6 +63,11 @@
     max-width: 100%;
 }
 
+.checkout-container {
+    width: 720px;
+    max-width: 90%;
+}
+
 .checkout-form-header {
     color: var(--buy-btn-clr);
 }
@@ -71,8 +76,7 @@
     flex-direction: row;
 
     &-section {
-        flex-grow: 1;
-        flex-basis: 50%;
+        flex: 1 1 20%;
 
         &:first-child {
             margin-right: 1em;
@@ -81,13 +85,36 @@
 
 }
 
+// .city-field,
+// .state-field {
+//     display: flex;
+// }
+
+// .city-field > *,
+// .state-field > * {
+//     flex: 1 1 25%;
+// }
+
 .credit-card-title {
     font-size: 1rem;
 }
 
 @media screen and (max-width: 44em) {
-    .header-subtitle-contact {
-        font-size: 2.5rem;
+    .header-subtitle-checkout {
+        font-size: 2.25rem;
     }
+
+    .duel-field {
+        flex-direction: column;
+    
+        &-section {
+            flex: 1 1 20%;
+    
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+    
+    }    
 
 }

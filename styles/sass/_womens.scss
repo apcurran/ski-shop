@@ -10,3 +10,16 @@
     animation: subtitleSlide 1100ms ease forwards;
     animation-delay: 210ms;
 }
+
+@media screen and (max-width: 94em) {
+    .header-subtitle-womens {
+        font-size: 4rem;
+    }
+
+}
+
+@media screen and (max-width: 56.25em) {
+    .header-subtitle-womens {
+        font-size: 2.25rem;
+    }
+}
