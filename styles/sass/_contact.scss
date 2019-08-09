@@ -63,3 +63,16 @@
     font-size: 1.1rem;
     cursor: pointer;
 }
+
+@media screen and (max-width: 94em) {
+    .header-subtitle-contact {
+        font-size: 4rem;
+    }
+
+}
+
+@media screen and (max-width: 56.25em) {
+    .header-subtitle-contact {
+        font-size: 2.25rem;
+    }
+}
