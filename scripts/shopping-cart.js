@@ -131,6 +131,7 @@ const shoppingCart = (() => {
                 cartArr.splice(selectedItem, 1);
                 localStorage.setItem("myShoppingCartItems", JSON.stringify(cartArr));
                 cartArr = JSON.parse(localStorage.getItem("myShoppingCartItems"));
+                updateCheckoutSubtotal();
             }
         }
 
