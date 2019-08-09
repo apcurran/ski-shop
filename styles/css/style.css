@@ -172,7 +172,7 @@ body {
     font-size: 2rem;
   }
   .nav-burger-list-container {
-    margin: 4.5rem 0;
+    margin: 4rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -336,6 +336,7 @@ button {
 
 .clothing-list {
   margin-top: 11.25rem;
+  margin-bottom: 2rem;
   top: 2rem;
   position: sticky;
   list-style: none;
