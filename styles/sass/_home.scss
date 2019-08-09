@@ -77,3 +77,36 @@
     grid-column: 1 / 4;
     grid-row: 2 / 3;
 }
+
+@media screen and (max-width: 71em) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .main-article-1 {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    
+    .main-article-2 {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+    
+    .main-article-3 {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+    
+    .main-section {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+    }
+
+    .main-about-figure {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+    }
+
+} // End 71em media query //
