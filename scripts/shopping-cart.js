@@ -127,8 +127,10 @@ const shoppingCart = (() => {
                 const parentSection = selectedItem.parentElement;
                 parentSection.removeChild(selectedItem); // Delete from DOM
 
+                const itemName = event.target.previousElementSibling.previousElementSibling.textContent;
+
                 // Delete from cartArr in local storage
-                cartArr.splice(selectedItem, 1);
+                cartArr.splice(cartArr.findIndex(val => val.name === itemName), 1);
                 localStorage.setItem("myShoppingCartItems", JSON.stringify(cartArr));
                 cartArr = JSON.parse(localStorage.getItem("myShoppingCartItems"));
                 updateCheckoutSubtotal();
