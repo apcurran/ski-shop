@@ -7,7 +7,7 @@ Project [link](https://apcurran.github.io/ski-shop/)
 
 - JS functionality includes:
 
-    - Clothing filter for men and women's items
+    - Clothing filter for men and women's items (uses event delegation)
 
     - Add clothing items to cart
 
@@ -27,7 +27,9 @@ Project [link](https://apcurran.github.io/ski-shop/)
 
 - CSS Grid and Flexbox used throughout
 
-- Sass used throughout for nesting styles and partials
+- CSS variables (custom properties) used
+
+- Sass used throughout for nesting, partials, and mixins
 
 - Mobile-friendly layout
 
