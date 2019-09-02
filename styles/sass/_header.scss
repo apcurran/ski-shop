@@ -148,9 +148,14 @@
         color: #fff;
         animation: subtitleWelcomeSlide 1100ms ease forwards;
         animation-delay: 210ms;
-        transform: translate3d(-50%, 20%, 0);
+        transform: translate3d(-50%, 50%, 0);
+        text-shadow: 2px 2px 4px #000;
         opacity: 0;
         will-change: transform;
+    }
+
+    .header-subtitle {
+        @include subtitle-mobile-center;
     }
 
     .header-subtitle-slogan {

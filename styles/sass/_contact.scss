@@ -62,11 +62,13 @@
     color: #fff;
     font-size: 1.1rem;
     cursor: pointer;
+    transition: background-color 200ms ease;
 }
 
 @media screen and (max-width: 94em) {
     .header-subtitle-contact {
         font-size: 4rem;
+        @include subtitle-mobile-center;
     }
 
 }

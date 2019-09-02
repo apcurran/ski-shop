@@ -10,6 +10,7 @@
   --nav-children-margin: 1.5rem 2.5rem;
   --main-bg: #999;
   --buy-btn-clr: #0079b1;
+  --buy-btn-clr-dark: #035175;
   --main-letter-spacing: .9px;
   --alt-ease: cubic-bezier(.19,.71,.4,1);
 }
@@ -23,6 +24,10 @@ html {
 
 body {
   background-color: #fcfcfc;
+}
+
+button:hover {
+  background-color: var(--buy-btn-clr-dark);
 }
 
 .header {
@@ -157,9 +162,17 @@ body {
     color: #fff;
     animation: subtitleWelcomeSlide 1100ms ease forwards;
     animation-delay: 210ms;
-    transform: translate3d(-50%, 20%, 0);
+    transform: translate3d(-50%, 50%, 0);
+    text-shadow: 2px 2px 4px #000;
     opacity: 0;
     will-change: transform;
+  }
+
+  .header-subtitle {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, 50%, 0);
+    text-shadow: 2px 2px 4px #000;
   }
 
   .header-subtitle-slogan {
@@ -380,6 +393,7 @@ button {
   background-color: var(--buy-btn-clr);
   color: #fff;
   cursor: pointer;
+  transition: background-color 200ms ease;
 }
 
 .section-clothing {
@@ -446,6 +460,10 @@ button {
 @media screen and (max-width: 94em) {
   .header-subtitle-womens {
     font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, 50%, 0);
+    text-shadow: 2px 2px 4px #000;
   }
 }
 @media screen and (max-width: 56.25em) {
@@ -514,11 +532,16 @@ button {
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
+  transition: background-color 200ms ease;
 }
 
 @media screen and (max-width: 94em) {
   .header-subtitle-contact {
     font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, 50%, 0);
+    text-shadow: 2px 2px 4px #000;
   }
 }
 @media screen and (max-width: 56.25em) {
@@ -611,6 +634,10 @@ button {
 @media screen and (max-width: 44em) {
   .header-subtitle-checkout {
     font-size: 2.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, 50%, 0);
+    text-shadow: 2px 2px 4px #000;
   }
 
   .duel-field {

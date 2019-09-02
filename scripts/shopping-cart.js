@@ -1,6 +1,7 @@
 const shoppingCart = (() => {
     // Code that runs across all pages.
     let cartArr = JSON.parse(localStorage.getItem("myShoppingCartItems")) || [];
+    
     const cartIcon = document.querySelector(".bag-link-quantity");
     const burgerNav = document.querySelector(".nav-burger-list-container");
     const navUl = document.querySelector(".nav-list");

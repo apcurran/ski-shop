@@ -64,6 +64,7 @@ button {
     background-color: var(--buy-btn-clr);
     color: #fff;
     cursor: pointer;
+    transition: background-color 200ms ease;
 }
 
 .section-clothing {

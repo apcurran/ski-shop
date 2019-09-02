@@ -12,6 +12,7 @@ const clothingFilter = (() => {
     }
 
     function getId(event) {
+        if (event.target.tagName !== "LI") return;
         const myId = event.target.id;
         return myId;
     }
