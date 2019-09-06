@@ -103,7 +103,7 @@ button:hover {
   position: absolute;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
   width: 75px;
   animation: arrowPulse 650ms ease-in-out infinite alternate;
 }
@@ -173,7 +173,7 @@ button:hover {
 @media screen and (max-width: 71em) {
   .header-subtitle-welcome {
     position: absolute;
-    display: block;
+    text-align: center;
     top: 50%;
     left: 50%;
     font-size: 2.5rem;
@@ -187,6 +187,7 @@ button:hover {
   }
 
   .header-subtitle {
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
@@ -481,6 +482,7 @@ button {
 
 @media screen and (max-width: 94em) {
   .header-subtitle-womens {
+    text-align: center;
     font-size: 4rem;
     top: 50%;
     left: 50%;
@@ -490,7 +492,12 @@ button {
 }
 @media screen and (max-width: 56.25em) {
   .header-subtitle-womens {
+    text-align: center;
     font-size: 2.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    text-shadow: 2px 2px 4px #000;
   }
 }
 .header-subtitle-contact {
@@ -559,6 +566,7 @@ button {
 
 @media screen and (max-width: 94em) {
   .header-subtitle-contact {
+    text-align: center;
     font-size: 4rem;
     top: 50%;
     left: 50%;
@@ -568,7 +576,12 @@ button {
 }
 @media screen and (max-width: 56.25em) {
   .header-subtitle-contact {
+    text-align: center;
     font-size: 2.25rem;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    text-shadow: 2px 2px 4px #000;
   }
 }
 .header-subtitle-checkout {
@@ -655,6 +668,7 @@ button {
 
 @media screen and (max-width: 44em) {
   .header-subtitle-checkout {
+    text-align: center;
     font-size: 2.25rem;
     top: 50%;
     left: 50%;
