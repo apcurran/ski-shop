@@ -173,13 +173,14 @@ button:hover {
 @media screen and (max-width: 71em) {
   .header-subtitle-welcome {
     position: absolute;
+    display: block;
     top: 50%;
     left: 50%;
     font-size: 2.5rem;
     color: #fff;
     animation: subtitleWelcomeSlide 1100ms ease forwards;
     animation-delay: 210ms;
-    transform: translate3d(-50%, 50%, 0);
+    transform: translate3d(-50%, -50%, 0);
     text-shadow: 2px 2px 4px #000;
     opacity: 0;
     will-change: transform;
@@ -188,7 +189,7 @@ button:hover {
   .header-subtitle {
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, 50%, 0);
+    transform: translate3d(-50%, -50%, 0);
     text-shadow: 2px 2px 4px #000;
   }
 
@@ -483,7 +484,7 @@ button {
     font-size: 4rem;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, 50%, 0);
+    transform: translate3d(-50%, -50%, 0);
     text-shadow: 2px 2px 4px #000;
   }
 }
@@ -561,7 +562,7 @@ button {
     font-size: 4rem;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, 50%, 0);
+    transform: translate3d(-50%, -50%, 0);
     text-shadow: 2px 2px 4px #000;
   }
 }
@@ -657,7 +658,7 @@ button {
     font-size: 2.25rem;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, 50%, 0);
+    transform: translate3d(-50%, -50%, 0);
     text-shadow: 2px 2px 4px #000;
   }
 
