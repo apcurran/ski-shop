@@ -1,3 +1,5 @@
+"use strict";
+
 const shoppingCart = (() => {
     // Code that runs across all pages.
     let cartArr = JSON.parse(localStorage.getItem("myShoppingCartItems")) || [];

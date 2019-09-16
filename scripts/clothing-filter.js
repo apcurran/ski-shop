@@ -1,3 +1,5 @@
+"use strict";
+
 const clothingFilter = (() => {
     // Cache DOM
     const ul = document.querySelector(".clothing-list");

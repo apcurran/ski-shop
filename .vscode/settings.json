@@ -1,3 +1,4 @@
 {
-    "terminal.integrated.fontFamily": "consolas, monospace"
+    "terminal.integrated.fontFamily": "consolas, monospace",
+    "liveServer.settings.port": 5501
 }
