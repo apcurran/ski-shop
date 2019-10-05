@@ -22,7 +22,6 @@ const shoppingCart = (() => {
 
     // Code that only runs on clothing pages.
     if (document.querySelector("body").dataset.clothing) {
-        console.log("Hi clothing pages!");
 
         const mainClothingContainer = document.querySelector(".clothing-container");
         const addBtn = document.querySelectorAll(".section-clothing-btn");
@@ -79,7 +78,6 @@ const shoppingCart = (() => {
 
     // Code that only runs on the checkout page.
     if (document.querySelector("body").dataset.checkout) {
-        console.log("Hi checkout page!");
 
         const mainCheckoutContainer = document.querySelector(".main-checkout-container");
         const itemSubtotalSpan = document.querySelector(".items-subtotal");
