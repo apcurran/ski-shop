@@ -3,6 +3,10 @@ Creating a sports-themed commerce site
 
 Project [link](https://apcurran.github.io/ski-shop/)
 
+![Ski Shop Hero Section](https://github.com/apcurran/ski-shop/blob/master/images/ski-shop1.jpg)
+
+![Ski Shop Items](https://github.com/apcurran/ski-shop/blob/master/images/ski-shop2.jpg)
+
 ## Features:
 
 - JS functionality includes:
