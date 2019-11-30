@@ -137,9 +137,8 @@ const shoppingCart = (() => {
                 cartArr.splice(currItemIndex, 1);
                 localStorage.setItem("myShoppingCartItems", JSON.stringify(cartArr));
                 cartArr = JSON.parse(localStorage.getItem("myShoppingCartItems"));
+                
                 updateCheckoutSubtotal();
-
-                // Update cart icon
                 updateCartIconTotal();
             }
         }
