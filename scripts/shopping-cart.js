@@ -128,8 +128,7 @@ const shoppingCart = (() => {
         function deleteItem(event) {
             if (event.target.className === "delete-btn") {
                 const selectedItem = event.target.parentElement;
-                const parentSection = selectedItem.parentElement;
-                parentSection.removeChild(selectedItem); // Delete from DOM
+                selectedItem.remove(); // Delete from DOM
 
                 const itemName = event.target.previousElementSibling.previousElementSibling.textContent;
                 const currItemIndex = cartArr.findIndex(obj => obj.name === itemName);

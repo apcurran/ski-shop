@@ -20,7 +20,7 @@ const clothingFilter = (() => {
     }
 
     function loopAndHideSections(clothingName) {
-        sections.forEach((section) => {
+        sections.forEach(section => {
             if (section.dataset.clothing !== clothingName) {
                 section.style.display = "none";
             } else {
@@ -30,7 +30,7 @@ const clothingFilter = (() => {
     }
 
     function loopAndHideHeaders(clothingName) {
-        sectionHeaders.forEach((sectionHeader) => {
+        sectionHeaders.forEach(sectionHeader => {
             if (sectionHeader.dataset.clothing !== clothingName) {
                 sectionHeader.style.display = "none";
             } else {
