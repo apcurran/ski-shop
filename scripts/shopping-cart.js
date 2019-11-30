@@ -19,6 +19,13 @@ const shoppingCart = (() => {
 
     updateCartIconTotal();
     burgerNav.addEventListener("click", toggleNav);
+    // Close nav when clicked outside
+    document.addEventListener("click", (event) => {
+        if (event.target === burgerNav) return;
+
+        const isOutside = !event.target.closest(".nav-burger-list-container");
+        if (isOutside) toggleNav();
+    });
 
     // Code that only runs on clothing pages.
     if (document.querySelector("body").dataset.clothing) {
@@ -55,7 +62,6 @@ const shoppingCart = (() => {
         }
 
         function addToCart(event) {
-            // Did the user click an add to cart btn?
             if (event.target.className === "section-clothing-btn") {
                 const el = event.target;
                 const h3 = el.previousElementSibling;
@@ -101,11 +107,8 @@ const shoppingCart = (() => {
                 article.classList.add("cart-item-checkout-article");
                 div.classList.add("delete-btn");
 
-                article.appendChild(nameHeader);
-                article.appendChild(priceHeader);
-                article.appendChild(div);
-
-                section.appendChild(article);
+                article.append(nameHeader, priceHeader, div);
+                section.append(article);
             }
 
             mainCheckoutContainer.prepend(section);
