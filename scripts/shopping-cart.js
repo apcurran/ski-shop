@@ -31,7 +31,6 @@ const shoppingCart = (() => {
     if (document.querySelector("body").dataset.clothing) {
 
         const mainClothingContainer = document.querySelector(".clothing-container");
-        const addBtn = document.querySelectorAll(".section-clothing-btn");
         
         function getItemName(itemHeader) {
             const name = itemHeader.children[0].textContent;
