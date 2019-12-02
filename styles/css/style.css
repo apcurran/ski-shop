@@ -542,7 +542,7 @@ button {
 
 .form-btn-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 2rem;
 }
@@ -550,7 +550,7 @@ button {
 .form-add-btn {
   padding: 1em 3em;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: var(--buy-btn-clr);
   color: #fff;
   font-size: 1.1rem;
